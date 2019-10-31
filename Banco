@@ -1,0 +1,45 @@
+CREATE DATABASE portaria;
+use database portaria;
+
+DROP TABLE IF EXISTS acessos;
+
+CREATE TABLE acessos (
+  id int(255) NOT NULL AUTO_INCREMENT,
+  rg varchar(12) NOT NULL,
+  identificador varchar(50) NOT NULL,
+  foto varchar(100) NOT NULL,
+  nome varchar(50) NOT NULL,
+  data date NOT NULL,
+  hora varchar(8) NOT NULL,
+  bloco varchar(10) NOT NULL,
+  apto varchar(10) NOT NULL,
+  autorizado varchar(50) NOT NULL,
+  dentro_fora varchar(20) NOT NULL,
+  PRIMARY KEY (id)
+) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8;
+
+
+DROP TABLE IF EXISTS visitantes;
+
+CREATE TABLE visitantes (
+  id int(255) NOT NULL AUTO_INCREMENT,
+  nome varchar(50) NOT NULL,
+  identificador varchar(50) NOT NULL,
+  rg varchar(12) NOT NULL,
+  foto varchar(100) NOT NULL,
+  telefone varchar(50) NOT NULL,
+  email varchar(50) NOT NULL,
+  endereco varchar(50) NOT NULL,
+  bairro varchar(50) NOT NULL,
+  cidade varchar(50) NOT NULL,
+  estado varchar(50) NOT NULL,
+  empresa varchar(50) NOT NULL,
+  data_cadastro date NOT NULL,
+  placa varchar(8) NOT NULL,
+  obs varchar(100) NOT NULL,
+  PRIMARY KEY (id)
+) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8;
+
+
+
+
